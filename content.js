@@ -21,7 +21,7 @@ xhr.onreadystatechange = function() {
 };
 xhr.send();
 
-var tags = ['p', 'h', 'span', 'a', 'dd']
+var tags = ['p', 'h', 'span', 'a', 'dd', 'td']
 // will be implemented in next version as choosing tags from the array
 
 
@@ -62,27 +62,30 @@ function gotMessage(message, sender, sendResponse) {
          
          let ps = document.getElementsByTagName("p");
          for(p of ps) {
-             p.innerHTML = cyrylize(p.textContent);
+             p.textContent = cyrylize(p.textContent);
          }
          let as = document.getElementsByTagName("a");
          for(a of as) {
-             a.innerHTML = cyrylize(a.textContent);
+             a.textContent = cyrylize(a.textContent);
          }
          for (var j = 1; j < 7; j++) {
              let hs = document.getElementsByTagName("h" + String(j));
              for (h of hs) {
-                 h.innerHTML = cyrylize(h.textContent);
+                 h.textContent = cyrylize(h.textContent);
              }
          }
          let title = document.getElementsByTagName("title");
          for (t of title) {
-             t.innerHTML = cyrylize(t.textContent);
+             t.textContent = cyrylize(t.textContent);
          }
          let sps = document.getElementsByTagName("span");
          for (sp of sps) {
-             sp.innerHTML = cyrylize(sp.textContent);
+             sp.textContent = cyrylize(sp.textContent);
          }
-         
+         let tds = document.getElementsByTagName("td");
+         for (td of tds) {
+             td.textContent = cyrylize(td.textContent);
+         }
      }
 }
 
