@@ -86,6 +86,10 @@ function gotMessage(message, sender, sendResponse) {
          for (td of tds) {
              td.textContent = cyrylize(td.textContent);
          }
+         let dds = document.getElementsByTagName("dd");
+         for (dd of dds) {
+             dd.textContent = cyrylize(dd.textContent);
+         }
      }
 }
 
